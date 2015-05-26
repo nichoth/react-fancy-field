@@ -1,0 +1,35 @@
+{
+  "name": "react-fancy-field",
+  "description": "Text field with crud buttons",
+  "main": "FancyField.jsx",
+  "version": "0.0.0",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -d example/example.jsx > example/bundle.js",
+    "watch": "watchify example/example.jsx -o example/bundle.js -dv",
+    "dev": "parallelshell \"npm run watch\" \"npm run server\"",
+    "server": "node server.js",
+    "demo": "browserify example/example.jsx > example/bundle.js && html-inline example/index.html | curl -sT- https://htmlb.in"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nichoth/react-fancy-field.git"
+  },
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "ecstatic": "^0.8.0",
+    "material-ui": "^0.8.0",
+    "parallelshell": "^1.1.1",
+    "react": "^0.13.3",
+    "react-crud-buttons": "../react-crud-buttons",
+    "reactify": "^1.1.1"
+  },
+  "dependencies": {}
+}
