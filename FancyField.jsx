@@ -19,17 +19,18 @@ var FancyField = React.createClass({
 
   _handleEditClick: function(event) {
     event.preventDefault();
+    console.log("bla");
     this.setState({ isEditing: true });
   },
 
   _handleDeleteClick: function(event) {
     event.preventDefault();
-    this.props.deleteHandler();
+    this.props.onDelete();
   },
 
   _handleSaveClick: function(event) {
     event.preventDefault();
-    this.props.saveHandler();
+    this.props.onSave();
   },
 
   _handleCancelClick: function() {
@@ -43,9 +44,12 @@ var FancyField = React.createClass({
     var hiddenStyle = {
       display: 'none',
     };
+    var style = {
+      display: 'inline-block'
+    };
 
     return (
-      <div className={'fancy-field '+classes}>
+      <div className={'fancy-field '+classes} style={style}>
 
         <span style={this.state.isEditing ? hiddenStyle : {}}>
           {this.props.textNode}

@@ -25,11 +25,11 @@
   "peerDependencies": {},
   "devDependencies": {
     "ecstatic": "^0.8.0",
-    "material-ui": "^0.8.0",
     "parallelshell": "^1.1.1",
     "react": "^0.13.3",
-    "react-crud-buttons": "../react-crud-buttons",
     "reactify": "^1.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-crud-buttons": "file:../react-crud-buttons"
+  }
 }
